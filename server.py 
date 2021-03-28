@@ -1,0 +1,73 @@
+import socket
+import logging
+import random
+
+DEFAULT_PORT = 9090
+
+logging.basicConfig(filename="logs.log", format='%(asctime)s-%(levelname)s- %(message)s', level=logging.INFO)
+
+def is_port_free(port):
+    try:
+        sock = socket.socket()
+        sock.bind( ("", port) )
+        sock.close()
+        logging.info("port %i is free", port)
+        return True
+    except:
+        logging.warning("port %i is busy", port)
+        return False
+
+
+print("Server is running")
+logging.info("server is running")
+
+# create socket
+sock = socket.socket()
+
+if is_port_free(DEFAULT_PORT):
+
+    # select host and port
+    sock.bind( ("", 9090) )
+
+    sock.listen(1)
+    print("-port %d is listening"%DEFAULT_PORT)
+    logging.info("port %i is listening", DEFAULT_PORT)
+else:
+    flag = False
+    while flag == False:
+        port = round( random.random() * 63000 + 1024 )
+        print("-port %d is checking"%port)
+        logging.info("port %i is checking", port)
+        if is_port_free(port):
+            flag = True
+    print("-port %d is listening"%port)
+    logging.info("port %i is listening", port)
+
+try:
+    while True:
+        conn, addr = sock.accept()
+        print("-client was connected")
+        logging.info("client was connected")
+
+        while True:
+            data = conn.recv(1024)
+            print("-process of receiving data from the client")
+            logging.info("process of receiving data from the client")
+
+            print("data: " + data)
+
+            if not data:
+                print("-client disconnection process")
+                logging.info("client disconnection process")
+
+                break
+            conn.send(data)
+            print("-data has been sent to the client")
+            logging.info("data has been sent to the client")
+except:
+    print("Something went wrong")
+    logging.warning("exception")
+finally:     
+    print("-server is stopping")
+    logging.info("server is stopping")
+    sock.close()

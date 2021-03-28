@@ -1,0 +1,33 @@
+2021-03-28 11:13:57,960-INFO- server is running
+2021-03-28 11:13:57,961-INFO- port is listening
+2021-03-28 11:14:13,020-INFO- client was connected
+2021-03-28 11:14:19,142-INFO- process of receiving data from the client
+2021-03-28 11:14:19,142-INFO- data has been sent to the client
+2021-03-28 11:14:36,534-INFO- process of receiving data from the client
+2021-03-28 11:14:36,534-INFO- data has been sent to the client
+2021-03-28 11:14:39,380-INFO- process of receiving data from the client
+2021-03-28 11:14:39,380-INFO- data has been sent to the client
+2021-03-28 11:14:39,388-INFO- process of receiving data from the client
+2021-03-28 11:14:39,388-INFO- client disconnection process
+2021-03-28 11:14:46,157-ERROR- exception
+2021-03-28 11:14:46,157-INFO- server is stopping
+2021-03-28 12:17:59,978-INFO- server is running
+2021-03-28 12:17:59,978-INFO- port 9090 is free
+2021-03-28 12:17:59,978-INFO- port 9090 is listening
+2021-03-28 12:18:40,004-WARNING- exception
+2021-03-28 12:18:40,004-INFO- server is stopping
+2021-03-28 12:23:22,054-INFO- server is running
+2021-03-28 12:23:22,055-INFO- port 9090 is free
+2021-03-28 12:23:22,055-INFO- port 9090 is listening
+2021-03-28 12:23:32,090-WARNING- exception
+2021-03-28 12:23:32,090-INFO- server is stopping
+2021-03-28 12:24:22,348-INFO- server is running
+2021-03-28 12:24:22,349-INFO- port 9090 is free
+2021-03-28 12:24:22,349-INFO- port 9090 is listening
+2021-03-28 12:24:25,037-WARNING- exception
+2021-03-28 12:24:25,037-INFO- server is stopping
+2021-03-28 12:24:39,677-INFO- server is running
+2021-03-28 12:24:39,678-INFO- port 9090 is free
+2021-03-28 12:24:39,678-INFO- port 9090 is listening
+2021-03-28 12:24:41,336-WARNING- exception
+2021-03-28 12:24:41,337-INFO- server is stopping
